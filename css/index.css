@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+ 
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root{
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-one: hsl(211, 68%, 94%);
+    --light-grayish-blue-two: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue:hsl(219, 12%, 42%);
+    --very-dark-blue:hsl(224, 21%, 14%);
+}
+
+body{
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--very-light-grayish-blue);
+}
+
+
+/* hover and focus */
+
+.picture img:hover,
+.picture img:focus{
+    border-color: var(--light-grayish-blue-one);
+}
+
+.event:hover,
+.event:focus,
+.sender-name:hover,
+.sender-name:focus{
+    color: var(--blue);
+}
+
+.message-box:hover,
+.message-box:focus{
+    background-color: var(--light-grayish-blue-one);
+
+}
+
+
+.message-box,
+button,
+.picture img,
+a{
+    cursor: pointer;
+}
+
+button:hover,
+button:focus ,
+.chass-club{
+    color: var(--blue);
+}
+
+
+a{
+    text-decoration: none;
+}
+
+p{
+    color:var(--dark-grayish-blue) ;
+    line-height: 1.4;
+}
+
+/* main */
+
+.main{
+    max-width: 750px;
+    background: #fff;
+    padding: 1rem 1rem 0rem;
+    border-radius: 0.3rem;
+    margin-inline: auto;
+}
+
+/* header */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 0rem;
+}
+
+
+h1{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+.count{
+  
+    border: 1px solid black;
+    background: var(--blue) ;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.1em 0.6em;
+    border-radius: 0.3rem;
+}
+
+
+
+/* button */
+button{
+    border: none;
+    background: transparent;
+    color: var(--dark-grayish-blue);
+    
+}
+
+a ,
+button{
+    font-weight: 800;
+}
+ 
+/* images */
+img{
+    width: 50px;
+}
+
+.picture img {
+    border: 3.5px solid  #fff;
+    border-radius: 0.4rem;
+}
+
+
+
+
+/* messages */
+
+.messages-container{
+    display: flex;
+    flex-direction:column ;
+    gap: 0.5rem;
+}
+.message{
+    display: flex;
+    gap: 1.3rem;
+    align-items: flex-start;
+    background: rgb(255, 255, 255) ;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+ 
+
+.sender-name{
+   margin-right:0.3em;
+   color: var(--very-dark-blue);
+}
+
+.event{
+   margin-left: 0.3em;
+   color: var(--dark-grayish-blue);
+}
+.text{
+    display: flex;
+    gap: 0.6rem;
+    justify-content: space-between;
+    flex: 1;
+}
+.message:nth-child(4) .text{
+    flex-direction: column;
+}
+
+.message-box{
+    border: 1px solid var(--grayish-blue);
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+
+ 
+.unread{
+    background: var(--very-light-grayish-blue);
+}
+ 
+
+.unread .text p:first-child:after{
+    display: inline-block;
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-left: 0.4rem;
+    
+    background-color: var(--red);
+
+}
+
+
+@media(min-width:700px){
+    body{
+        padding: 3rem 0;
+    }
+
+    .main{
+        padding: 2rem 2rem 0.5rem ;
+    }
+}
